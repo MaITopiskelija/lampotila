@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lämpötilamuunnin</title>
+       <link rel="stylesheet" href="css/main.css">
+       <script src="js/lampotila.js"></script>
+
+</head>
+<body>
+    <h2>Lämpötilamuunnin</h2>
+    
+    <fieldset>
+        <legend>Valitse muunnos ja syötä lämpötila</legend>
+             
+        
+        <label for="conversionType">Valitse muunnos:</label>
+            <select id="conversionType">
+            <option value="toFahrenheit">Celsius → Fahrenheit</option>
+            <option value="toCelsius">Fahrenheit → Celsius</option>
+        
+        <label for="temperature">Anna lämpötila:</label>
+            <input type="number" id="temperature" placeholder="Syötä lämpötila">
+        </select>
+        
+        <button onclick="convertTemperature()">Muunna</button>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Tulos</legend>
+        <p id="result"></p>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Valitse desimaalitarkkuus</legend>
+        <input type="radio" name="precision" value="1" onclick="setPrecision(1)" checked> 1 desimaali
+        <input type="radio" name="precision" value="2" onclick="setPrecision(2)"> 2 desimaalia
+        <input type="radio" name="precision" value="3" onclick="setPrecision(3)"> 3 desimaalia
+    </fieldset>
+    
+</body>
+</html>
